@@ -1,8 +1,5 @@
 fileFormatVersion: 2
-guid: 45281828b4c9247558c7c695124d6877
-labels:
-- Turrets
-- RotationLimits
+guid: 53febec813744c944bf8b8be76fb882f
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
