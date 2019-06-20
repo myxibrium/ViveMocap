@@ -58,12 +58,12 @@ public class RigCalibrator : MonoBehaviour
             float3 mocapPos = mocapPositions[i];
             int nearest = findNearest(mocapPos, ikControlPositions);
             mocapOffsetPositions[i] = ikControlPositions[nearest];
-            mocapOffsetRotations[i] = math.mul(math.inverse(mocapRotations[i]), ikControlRotations[nearest]);
+            mocapOffsetRotations[i] = ikControlRotations[nearest];
             
             var ikTarget = ikControlsParent.GetChild(nearest).GetComponent<PositionRotationMatcher>();
             if (ikTarget)
             {
-                ikTarget.target = transform.GetChild(i);
+                ikTarget.target = transform.GetChild(i).GetChild(0);
             }
         }
 
