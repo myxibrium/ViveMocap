@@ -6,7 +6,7 @@ public class PositionRotationMatcher : MonoBehaviour
 {
     public Transform target;
 
-    private void Update()
+    private void LateUpdate()
     {
         if (target)
         {
